@@ -28,6 +28,6 @@ for i in range(1,n):
     date.extend(x1)
     data.extend(x2)
     incr.extend(x3)
-    time.sleep(2)
+    time.sleep(1)
     
 print(date,data,incr)
