@@ -18,13 +18,13 @@ def date_data_incr(target):
         incr.append(item[2])
     return date,data,incr
 
-n=3 
-date=[]
-data=[]
-incr=[]
-target='http://data.eastmoney.com/shibor/shibor.aspx?m=sh&t=99&d=99226&cu=cny&type=009021&p='
+n=3 #爬取网页数目
+date=[] #日期
+data=[] #银行间拆放利率
+incr=[] #变化量
+target='http://data.eastmoney.com/shibor/shibor.aspx?m=sh&t=99&d=99226&cu=cny&type=009021&p=' #主网址
 for i in range(1,n):
-    x1,x2,x3=date_data_incr(target+str(i))
+    x1,x2,x3=date_data_incr(target+str(i)) #主网址+分网页
     date.extend(x1)
     data.extend(x2)
     incr.extend(x3)
